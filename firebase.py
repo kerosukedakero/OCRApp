@@ -48,6 +48,8 @@ def download_blob(filenamedown, path):
     urllib.request.urlretrieve(blob.public_url)
     print("ダウンロード完了")
 
+#コミットのためにコメント書く
+
 #実行
 if __name__ == '__main__':
     download_blob(filenamedown,path)
