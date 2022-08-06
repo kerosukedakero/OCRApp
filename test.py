@@ -1,2 +1,6 @@
 import datetime
-date = datetime.datetime.now()
+def main():
+    date = datetime.datetime.now()
+    print(date)
+
+main()
