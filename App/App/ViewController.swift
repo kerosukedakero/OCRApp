@@ -68,22 +68,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         
         
     }
-    
-    
-
-/*
-    func getimage() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        present(imagePickerController,animated: true,completion: nil)
-
-    }
-    */
-
-    
-
-    
+        
     
     func loadImage(){
         let storageref = Storage.storage().reference(forURL: "gs://loadimage-9bac0.appspot.com/").child("post")
