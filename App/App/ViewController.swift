@@ -18,6 +18,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
     
     @IBOutlet weak var imageViewpicker: UIImageView!
     
+    
+    //upload firebase storage
     @IBAction func uploadImageButton(){
      //   print("アップロードされました")
         
@@ -25,16 +27,18 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         print("tapped")
     }
     
-   
+    //use cropViewController
     @IBAction func imagecropping(_ sender: Any) {
     }
     
+    //use iPhone Camera
     @IBAction func camerabutton(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .camera
         imagePickerController.delegate = self
         present(imagePickerController,animated: true,completion: nil)
     }
+    
     
     @IBOutlet weak var uplaodimagebutton2: UIButton!
     
@@ -51,6 +55,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         takepicture.layer.cornerRadius = 10.0
     }
     
+    //upload firebase storage
     func uploadImage(){
         let storageref = Storage.storage().reference(forURL: "gs://loadimage-9bac0.appspot.com/").child("post")
         
@@ -69,7 +74,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         
     }
         
-    
+    //unuse
     func loadImage(){
         let storageref = Storage.storage().reference(forURL: "gs://loadimage-9bac0.appspot.com/").child("post")
         
